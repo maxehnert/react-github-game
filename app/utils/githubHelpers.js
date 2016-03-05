@@ -14,6 +14,8 @@ var helpers = {
       return info.map(function(user) {
         return user.data;
       })
+    }).catch(function(error) {
+      console.warn('Error in getPlayersInfo', error);
     })
   }
 };
