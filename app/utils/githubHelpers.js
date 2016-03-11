@@ -5,11 +5,11 @@ var sec = 'SECRECT_ID';
 var param = '?client_id=' + id + '&client_secret=' + sec;
 
 function getUserInfo(username) {
-  return axios.get('https://api.github.com/users/' + username + param)
+  return axios.get('https://api.github.com/users/' + username )
 }
 
 function getRepos(username) {
-  return axios.get('https://api.github.com/users/' + username + '/repos' + param + '&per_page=100')
+  return axios.get('https://api.github.com/users/' + username + '/repos')
 }
 
 function getTotalStars(repos) {
